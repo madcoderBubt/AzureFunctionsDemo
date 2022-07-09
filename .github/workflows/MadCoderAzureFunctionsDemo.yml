@@ -1,8 +1,8 @@
 name: Build and deploy .NET Core application to Function App MadCoderAzureFunctionsDemo
 on:
-  push:
+  pull_request:
     branches:
-    - master
+    - Release
 env:
   AZURE_FUNCTIONAPP_NAME: MadCoderAzureFunctionsDemo
   AZURE_FUNCTIONAPP_PACKAGE_PATH: .\published
@@ -14,7 +14,7 @@ jobs:
   build-and-deploy:
     runs-on: windows-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@Release
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
