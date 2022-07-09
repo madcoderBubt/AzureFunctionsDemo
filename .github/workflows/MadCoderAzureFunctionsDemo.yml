@@ -2,7 +2,7 @@ name: Build and deploy .NET Core application to Function App MadCoderAzureFuncti
 on:
   pull_request:
     branches:
-    - Release
+    - master
 env:
   AZURE_FUNCTIONAPP_NAME: MadCoderAzureFunctionsDemo
   AZURE_FUNCTIONAPP_PACKAGE_PATH: .\published
